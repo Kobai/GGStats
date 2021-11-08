@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<body style="font-family:arial, sans-serif">
+	<div>
+		<div style="display:flex; flex-direction:vertical">
+ 	   	<div id="pr_chart" class="chart"></div>
+ 	   	<div id="wr_chart" class="chart"></div>
+		</div>
+		<div id="mu_chart" class="chart"></div>
+	</div>
+</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var wr_graph = {{wr_graph_json | safe}};
+    Plotly.plot('wr_chart',wr_graph,{});        
+    var pr_graph = {{pr_graph_json | safe}};
+    Plotly.plot('pr_chart',pr_graph,{});        
+    var mu_graph = {{mu_graph_json | safe}};
+    Plotly.plot('mu_chart',mu_graph,{});        
+</script>
+</html>
