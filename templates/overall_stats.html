@@ -1,12 +1,23 @@
 <!doctype html>
 <html>
+<head>
+	<link href="{{ url_for('static', filename='overall_stats.css') }}" rel="stylesheet" type="text/css" >	
+</head>
 <body style="font-family:arial, sans-serif">
-	<div>
-		<div style="display:flex; flex-direction:vertical">
- 	   	<div id="pr_chart" class="chart"></div>
- 	   	<div id="wr_chart" class="chart"></div>
+	<div class='page_container'>
+		<div class='chart_container'>
+			<div class='pr_wr_container'>
+				<div class='half_container'>
+ 		   			<div id="pr_chart"></div>
+				</div>
+				<div class='half_container'>
+ 		   			<div id="wr_chart"></div>
+				</div>
+			</div>
+			<div class='mu_container'>
+				<div id="mu_chart" style="height:700px;"></div>
+			</div>
 		</div>
-		<div id="mu_chart" class="chart"></div>
 	</div>
 </body>
 
